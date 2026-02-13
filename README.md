@@ -1,2 +1,2 @@
 # website
-Midcoast Solicarity Website
+Midcoast Solidarity Website
