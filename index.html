@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -8,8 +9,13 @@
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-  <div id="site-header"><!-- header injected here --></div>
-
+  <div id="site-header"></div>
+  <script>
+  fetch('/header.html')
+    .then(r => r.text())
+    .then(html => document.getElementById('site-header-placeholder').innerHTML = html)
+    .catch(()=>{/* optional fallback */});
+  </script>
   <main class="container">
     <section>
       <h2>Welcome</h2>

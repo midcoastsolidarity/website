@@ -9,7 +9,12 @@
 </head>
 <body>
   <div id="site-header"><!-- header injected here --></div>
-
+  <script>
+  fetch('/header.html')
+    .then(r => r.text())
+    .then(html => document.getElementById('site-header-placeholder').innerHTML = html)
+    .catch(()=>{/* optional fallback */});
+  </script>
   <main class="container">
     <section>
       <h2>Welcome</h2>
