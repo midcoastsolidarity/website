@@ -26,6 +26,7 @@ header {
   color: black;
   display:flex;
   flex-direction:row; 
+  flex-wrap:wrap;
   justify-content:space-around; 
   align-content:stretch;
   align-items:center;
@@ -34,13 +35,15 @@ header {
     box-shadow: 5px 5px 9px 1px rgba(0,0,0,0.52);
 -webkit-box-shadow: 5px 5px 9px 1px rgba(0,0,0,0.52);
 -moz-box-shadow: 5px 5px 9px 1px rgba(0,0,0,0.52);
-height:20vh;
+min-height:20vh;
+max-height:34vh;
 
 }
 .heading {
   font-family:'Courier New', Courier, monospace;
   font-size: 300%;
-  max-height:20vh;
+  max-height:200px;
+  text-align:center;
 
 }
 /* Top navigation bar */
@@ -60,16 +63,21 @@ height:20vh;
 
 /* Change color on hover */
 .navbar a:hover {
-  background-color: #ddd;
-  color: #014F3F;
+  background-color: #014F3F;
+  color: white;
+  height:3em;
+  padding: 1em;
+  margin:2px;
 }
 
 .navbar-button{
-  padding: 10px;
+  padding:1em 0em;
   background-color: whitesmoke;
   border-color: gray;
+  border-radius:5px;
   margin:2px;
-  height:50%;
+  height:3em;
+  max-width: 18vw;
 }
 /* Landing */
 .landing {  
@@ -80,8 +88,8 @@ height:20vh;
   display:flex;
   align-items:center;
   box-shadow: 10px 10px 14px 1px rgba(0,0,0,0.52);
--webkit-box-shadow: 10px 10px 14px 1px rgba(0,0,0,0.52);
--moz-box-shadow: 10px 10px 14px 1px rgba(0,0,0,0.52);
+  -webkit-box-shadow: 10px 10px 14px 1px rgba(0,0,0,0.52);
+  -moz-box-shadow: 10px 10px 14px 1px rgba(0,0,0,0.52);
 
 }
 
@@ -100,12 +108,12 @@ height:20vh;
 /* Main column */
 .main {
   padding-top: 25px;
-  margin-left: 5%;
-  margin-right:5%;
+  margin-left: 10vw;
+  margin-right:10vw;
   width:auto;
   height:80%;
   background-color: white;
-  padding: 30px;
+  padding: 2vw;
 }
 
 
@@ -121,8 +129,8 @@ height:20vh;
     height: 375px;
     width: 200px;
     background-color: whitesmoke;
-    border: black;
-    padding: 5px;
+    border-radius: 10px;
+    padding: .5em;
     display: inline-grid;
     box-shadow: 10px 10px 14px 1px rgba(0,0,0,0.52);
     -webkit-box-shadow: 10px 10px 14px 1px rgba(0,0,0,0.52);
@@ -130,8 +138,8 @@ height:20vh;
   }
   /* Cover */
   .cover {
-    height:195px;
-    width: 130px;
+    max-height:195px;
+    max-width: 130px;
     margin:auto;
   }
 /* Title */
@@ -151,6 +159,7 @@ footer {
   color:white;
   font-family:Georgia, 'Times New Roman', Times, serif;
   display:flex;
+  flex-wrap:wrap;
   justify-content: space-between;
 
 }
@@ -158,154 +167,175 @@ footer {
 
 </style>
 </head>
+
+
 <body >
-
-
-
 <!-- Header -->
-<header>
-    <div style="width:200px;text-align:right">
-      <img src="images/favicon.svg">
-    </div>
-    <div class="heading";style="display:flex;align-items:center"> Midcoast Solidarity</div>
-    <!-- Navigation Bar -->
-    <div class="navbar" style="display:flex; align-items:self-end">
-      <div class="navbar-button">
-        <a href="#About">About</a>
+  <header>
+      <div style="max-height:200px;text-align:right">
+        <img style="max-height:10vh" src="images/logo.webp" alt="The midcoastsolidarity logo which is the Maine pine tree and star within the solidarity fist.">
       </div>
-      <div class="navbar-button">
-        <a href="#Contact">Contact</a>
+      <div class="heading";style="display:flex;align-items:center"> Midcoast Solidarity</div>
+      <!-- Navigation Bar -->
+      <div class="navbar" style="display:flex; flex:wrap;align-items:self-end">
+        <div class="navbar-button">
+          <a href="#About">About</a>
+        </div>
+        <div class="navbar-button">
+          <a href="#Contact">Contact</a>
+        </div>
+        <div class="navbar-button">
+          <a href="#Activities">Activities</a>
+        </div>
+        <div class="navbar-button"> 
+          <a href="#Bookclub">Bookclub</a>
+        </div>
+        <div class="navbar-button">
+          <a href="#Food">Food</a>
+        </div>
       </div>
-      <div class="navbar-button">
-        <a href="#Activities">Activities</a>
-      </div>
-      <div class="navbar-button"> 
-        <a href="#Bookclub">Bookclub</a>
-      </div>
-      <div class="navbar-button">
-        <a href="#Food">Food</a>
-      </div>
-    </div>
-</header>
+      <nav>
+
+  </nav>
+  </header>
 
 
 
-<!--Landing-->
-<div class="landing">
-  <div class="row">
-    <div class="column">
-      <div style="display:flex;text-align:right; align-items:center">
-        <h2>Midcoast Solidarity is commited to helping our communities survive and thrive through our current difficulties and into the future.</h2></div>
-      </div>    
-    <div class="column"><img src="images/fight.webp" alt="A cardboard sign with the message Fight Today for a Better Tomorrow" style="width:40%"></img></div>
-    </div> 
-</div>
-
-<!-- Content Container -->
-
-  <div class="main">
-  <!--Landing Text-->
-    <div>
-      <h3>Our mission is to develop socialist parallel power & build solidarity in Wabanaki Territory/Midcoast Maine to replace capitalist systems through education, advocacy, and organization.</h3>
-      <h3>News and Announcements</h3>
-      <h4>Come to our next meeting</h4>
-      <p>Midcoast Solidarity meets monthly on the 4rd Monday of the month at 7pm, with a social half hour starting at 6:30. Meetings are 90 minutes long and happen in person and online via jitsi. Masks are required to attend in person and we will have air purifiers running.</p>
-      <h4>Food Resource Launch</h4>
-      <p>MidcoastFood.me is a new resource intended to connect neighbors with free and local food resources across Maine. Use the interactive map to find food pantries, community fridges, and meal programs near you.</p>
-    </div>
-  <!--About-->
-  <div class="row">
-    <div style="flex:80%">
-      <h3 id="About">About</h3>
-      <p>Midcoast Solidarity is a group of people striving to organize to build a socialist future within Midcoast Maine. We define that region as stretching along the coast of Penobscot Bay from the mouth of the Passagassawakeag river, south to the Androscoggin river (enveloped by the settlements known as Belfast and Brunswick), and inland to I95.</p>
-      <h4>Our Mission</h4>
-        <p>Our mission is to develop socialist parallel power in Midcoast Maine/Wabanaki Territory communities to replace capitalist systems through education, advocacy, and organization. </p>
-      <h4>Our Values</h4>
-        <p>We value life over profit. The practices and ideologies of capitalism, coloniality, racism, and bigotry infringe upon the agency of individuals, groups, and marginalized identities. Midcoast Solidarity strives to separate our survival needs from these oppressive systems.</p>
-      <h4>Solidarity</h4>
-        <p>As a core principle, we agree to build solidarity with our fellow Midcoast Solidarity members, local community, and other organizations in our geographical area working towards liberation, because none of us are  free until all of us are free.</p>
-      <h4>Organization</h4>
-        <p>Our organization makes decisions using consent-based processes and is divided into smaller groups called circles that take on specific tasks.</p>
-      <p>Check out our Handbook!</p>
-      </div>
-    <img style="margin:2em; padding:1em; flex:20" src="images/midcoast_map.webp" alt="A map depicting the geographic area from Brunswick to Rockland to Augusta to Belfast">
+  <!--Landing-->
+  <div class="landing">
+    <div class="row">
+      <div class="column">
+        <div style="display:flex;text-align:right; align-items:center">
+          <h2>Midcoast Solidarity is commited to helping our communities survive and thrive through our current difficulties and into the future.</h2></div>
+        </div>    
+      <div class="column"><img src="images/fight.webp" alt="A cardboard sign with the message Fight Today for a Better Tomorrow" style="max-width:40vw"></img></div>
+      </div> 
   </div>
-  <!--Contact-->
-    <div>
-      <h3 id="Contact">Contact</h3>
-      <h4>Connect on Social Media</h4>
-      <div class="row">
-        <div class="column" style="margin:auto">
-          <img src="images/facebook.webp" alt="facebook logo">
-        </div>
-        <div class="column" style="margin:auto">
-          <img src="images/instagram.webp" alt="instagram logo">
-        </div>
 
-      </div>
-      <h4>Join our Email List or Get Involved</h4>
-    </div>
-  <!--Activities-->
-    <div>
-      <h3 id="Activities">Activities</h3>
-    </div>
-  <!--BookClub-->
-    <div>
-      <h3 id="Bookclub">Bookclub</h3>
-      <h4>Book Club meets every week, alternately in person in Rockland Maine, or virtually via our Signal group, from 6:30pm to 8:00pm. Get in touch if you'd like to be added to the group.</h4>
-      <h3>Currectly Reading</h3>
-      <div style="display:inline-flex">
-      <figure class="box">
-          <figcaption class="Title">Blackshirts and Reds: Rational Fascism and the Overthrow of Communism</figcaption>
-          <figcaption class="Author">Michael Parenti</figcaption>
-          <img class="cover" src="images/books/blackshirts.webp">
-      </figure>
-       <p style="flex:grow"><b>Schedule</b><br>date<br>date<br>date</p>
-      </div>
-      </div>
+  <!-- Content Container -->
+
+    <div class="main">
+    <!--Landing Text-->
       <div>
-      <h3>Previous Reads</h3>
-          <figure class="box">
-            <figcaption class="Title">The Dispossessed An Ambiguous Utopia</figcaption>
-            <figcaption class="Author">Ursula K. Le Guin</figcaption>
-            <img class="cover" src="images/books/dispossessed">
-    
-          </figure>
-          <figure class="box">
-            <figcaption class="Title">Red Valkyries: Feminist Lessons from Five Revolutionary Women</figcaption>
-            <figcaption class="Author">Kristen Ghodsee</figcaption>
-            <img class="cover" src="images/books/valkyries.webp">
-          </figure>
-          <figure class="box">
-            <figcaption class="Title">Starting Somewhere: Community Organizing for Socially Awkward People Who've Had Enough</figcaption>
-            <figcaption class="Author">Roderick Douglass</figcaption>
-              <img class="cover" src="images/books/starting.webp">
-          </figure>
-          <figure class="box">
-            <figcaption class="Title">Mutual Aid: Building Solidarity During this Crisis (and the Next)</figcaption>
-            <figcaption class="Author">Dean Spade</figcaption>
-              <img class="cover" src="images/books/mutual.webp">
-          </figure>
-          <figure class="box">
-            <figcaption class="Title">We Will Not Cancel Us: And Other Dreams of Transformative Justice</figcaption>
-            <figcaption class="Author">Adrienne Maree Brown</figcaption>
-              <img class="cover" src="images/books/cancel.webp">
-          </figure>
+        <h3>Our mission is to develop socialist parallel power & build solidarity in Wabanaki Territory/Midcoast Maine to replace capitalist systems through education, advocacy, and organization.</h3>
+        <h3>News and Announcements</h3>
+        <h4>Come to our next meeting</h4>
+        <p>Midcoast Solidarity meets monthly on the 4rd Monday of the month at 7pm, with a social half hour starting at 6:30. Meetings are 90 minutes long and happen in person and online via jitsi. Masks are required to attend in person and we will have air purifiers running.</p>
+        <h4>Food Resource Launch</h4>
+        <p>MidcoastFood.me is a new resource intended to connect neighbors with free and local food resources across Maine. Use the interactive map to find food pantries, community fridges, and meal programs near you.</p>
       </div>
-  <!--Food-->
+    <!--About-->
     <div>
-      <h3 id="Food">Food</h3>
-      <img src="images/midcoastfood.png">
-      <h4>Midcoast Solidarity has launched MidcoastFood.me, a new resource intended to connect neighbors with free and local food resources across Maine. Use the interactive map to find food pantries, community fridges, and meal programs near you.</h4>
+      
+        <h3 id="About">About</h3>
+        <p>Midcoast Solidarity is a group of people striving to organize to build a socialist future within Midcoast Maine. We define that region as stretching along the coast of Penobscot Bay from the mouth of the Passagassawakeag river, south to the Androscoggin river (enveloped by the settlements known as Belfast and Brunswick), and inland to I95.</p>
+        <img style="float:right; margin:0em 2em; padding:0em 1em; flex:20; max-width:30vw; max-height:40vw" src="images/midcoastmap.webp" alt="A map depicting the geographic area from Brunswick to Rockland to Augusta to Belfast">
+    
+        <h4>Our Mission</h4>
+          <p>Our mission is to develop socialist parallel power in Midcoast Maine/Wabanaki Territory communities to replace capitalist systems through education, advocacy, and organization. </p>
+        <h4>Our Values</h4>
+          <p>We value life over profit. The practices and ideologies of capitalism, coloniality, racism, and bigotry infringe upon the agency of individuals, groups, and marginalized identities. Midcoast Solidarity strives to separate our survival needs from these oppressive systems.</p>
+        <h4>Solidarity</h4>
+          <p>As a core principle, we agree to build solidarity with our fellow Midcoast Solidarity members, local community, and other organizations in our geographical area working towards liberation, because none of us are  free until all of us are free.</p>
+        <h4>Organization</h4>
+          <p>Our organization makes decisions using consent-based processes and is divided into smaller groups called circles that take on specific tasks.</p>
+        <p>Check out our Handbook!</p>
     </div>
-  </div>
+      
+      
+    <!--Contact-->
+      <div>
+        <h3 id="Contact">Contact</h3>
+        <h4>Connect on Social Media</h4>
+        <div class="row">
+          <div class="column" style="margin:auto">
+            <a href="https://www.facebook.com/people/Midcoast-Solidarity/61568329265665/">
+              <img src="images/facebook.webp" alt="facebook logo" style="max-height:20vh;max-width:25vw">
+            </a>
+          </div>
+          <div class="column" style="margin:auto">
+            <a href="https://www.instagram.com/midcoastsolidarity/">
+              <img src="images/instagram.webp" alt="instagram logo" style="max-height:23vh;max-width:30vw">
+            </a>
+            </div>
+          </div>
 
-<!-- Footer -->
-<footer>
-  <p>We keep us safe</p>
-  <p>info@midcoastsolidarity.org</p>
-  <p>2026</p>
-</footer>
+        </div>
+        <h4>Join our Email List or Get Involved</h4>
+    
+    <!--Activities-->
+      <div>
+        <h3 id="Activities">Activities</h3>
+      </div>
+    <!--BookClub-->
+      <div>
+        <h3 id="Bookclub">Bookclub</h3>
+        <h4>Book Club meets every week, alternately in person in Rockland Maine, or virtually via our Signal group, from 6:30pm to 8:00pm. Get in touch if you'd like to be added to the group.</h4>
+        <h3>Currectly Reading</h3>
+        <div style="display:inline-flex">
+        <figure class="box">
+            <figcaption class="Title">Pedagogy of the Oppressed</figcaption>
+            <figcaption class="Author">Paulo Freire</figcaption>
+            <img class="cover" src="images/books/pedagogy.webp">
+        </figure>
+        <p style="flex:grow"><b>Schedule</b><br>February 25: Rockland<br>March 4: Virtual<br>March 11: Rockland<br>March 18: Virtual<br>March 25: Rockland</p>
+        </div>
+        </div>
+        <div>
+        <h3>Previous Reads</h3>
+            <figure class="box">
+                <figcaption class="Title">The Gatherings: Reimagining Indigenous-Settler Relations</figcaption>
+                <figcaption class="Author">Shirley N Hager and Mawopiyane</figcaption>
+                <img class="cover" src="images/books/gatherings.webp">
+            </figure>    
+            <figure class="box">
+              <figcaption class="Title">Blackshirts and Reds: Rational Fascism and the Overthrow of Communism</figcaption>
+              <figcaption class="Author">Michael Parenti</figcaption>
+              <img class="cover" src="images/books/blackshirts.webp">
+            </figure>
+            <figure class="box">
+              <figcaption class="Title">The Dispossessed An Ambiguous Utopia</figcaption>
+              <figcaption class="Author">Ursula K. Le Guin</figcaption>
+              <img class="cover" src="images/books/dispossessed">
+      
+            </figure>
+            <figure class="box">
+              <figcaption class="Title">Red Valkyries: Feminist Lessons from Five Revolutionary Women</figcaption>
+              <figcaption class="Author">Kristen Ghodsee</figcaption>
+              <img class="cover" src="images/books/valkyries.webp">
+            </figure>
+            <figure class="box">
+              <figcaption class="Title">Starting Somewhere: Community Organizing for Socially Awkward People Who've Had Enough</figcaption>
+              <figcaption class="Author">Roderick Douglass</figcaption>
+                <img class="cover" src="images/books/starting.webp">
+            </figure>
+            <figure class="box">
+              <figcaption class="Title">Mutual Aid: Building Solidarity During this Crisis (and the Next)</figcaption>
+              <figcaption class="Author">Dean Spade</figcaption>
+                <img class="cover" src="images/books/mutual.webp">
+            </figure>
+            <figure class="box">
+              <figcaption class="Title">We Will Not Cancel Us: And Other Dreams of Transformative Justice</figcaption>
+              <figcaption class="Author">Adrienne Maree Brown</figcaption>
+                <img class="cover" src="images/books/cancel.webp">
+            </figure>
+        </div>
+    <!--Food-->
+      <div>
+        <h3 id="Food">Food</h3>
+        <img src="images/midcoastfood.png" style="max-height:20vh;max-width:70vw" alt="The logo for midcoastfood.me which is a circle containing a loaf of bread, a lighthouse, waves, and a heart.">
+        <h4>Midcoast Solidarity has launched MidcoastFood.me, a new resource intended to connect neighbors with free and local food resources across Maine. Use the interactive map to find food pantries, community fridges, and meal programs near you.</h4>
+      </div>
+    </div>
+  <div>
+  <!-- Footer -->
+  <footer>    column-gap: 20px;
+    row-gap:5px;    column-gap: 20px;
+    row-gap:5px;
+    <p>We keep us safe</p>
+    <p>info@midcoastsolidarity.org</p>
+    <p>2026</p>
+  </footer>
 </body>
 </html>
 
